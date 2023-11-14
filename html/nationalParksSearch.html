@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Park Search Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="../css/nationalparks.css">
+</head>
+<style>
+  
+</style>
+
+<body>
+    <header>
+        <h1>National Parks</h1>
+    </header>
+    <main id="main">
+        <div class="filter-box">
+            <h3>Filter</h3>
+
+            <p>Find National Parks based on State</p>
+            <div class="form-floating mb-3">
+                
+                <select name="" id="location-select" class="form-select" >
+                    <option>Show All</option>
+                    <!-- <option>Location</option>
+                    <option>Park Type</option> -->
+                    
+                </select>
+                <label for="location-select">Location</label>
+            </div>
+          
+
+            <!-- <div class="form-floating mb-3">
+                <select name="" id="breed-select" class="form-select">
+                    
+                    
+                </select>
+                <label for="breed-select">Color</label>
+            </div> -->
+
+        </div>
+        
+     
+
+        <div id="content" class="content">
+
+
+            
+            
+        </div>  
+
+    </main>
+    <footer class="fixed-bottom">
+        <p>&copy; 2023 Enjoy the Outdoors</p>
+    </footer>
+     <!-- bootstrap js -->
+     <script
+     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+     crossorigin="anonymous"
+   ></script>
+   <script src="../scripts/nationalParkSearchPage.js"></script>
+   <script src="../scripts/locationData.js"></script>
+   <script src="../scripts/nationalParkData.js"></script>
+</body>
+</html>
