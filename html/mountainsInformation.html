@@ -11,12 +11,28 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../css/mountains.css">
   </head>
   <body>
     <header>
       <h1>Mountains Page</h1>
     </header>
 
+    <main id="main">
+        <div class="filter-box">
+          <h3>Filter</h3>
+  
+          <p>Select Mountain</p>
+          <div class="form-floating mb-3">
+            <select name="" id="mountain-select" class="form-select">
+              <!-- <option>Show All</option> -->
+            </select>
+            <label for="mountain-select">Location</label>
+          </div>
+  
+        </div>
+        <div id="content" class="content"></div>
+      </main>
     <footer class="fixed-bottom">
       <p>&copy; 2023 Enjoy the Outdoors</p>
     </footer>
@@ -26,5 +42,7 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="../scripts/mountainData.js"></script>
+    <script src="../scripts/mountainInformation.js"></script>
   </body>
 </html>
