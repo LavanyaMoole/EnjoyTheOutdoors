@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded",()=>{
 populateLocations();
+populateParkTypes()
 displayNationalParks(nationalParksArray);
 let locationSelect=document.getElementById("location-select");
-locationSelect.addEventListener("change",filterParksBasedOnLocation)
+locationSelect.addEventListener("change",filterParksBasedOnLocationAndType)
 
-
+let parkTypeSelect=document.getElementById("parkType-select");
+parkTypeSelect.addEventListener("change",filterParksBasedOnLocationAndType)
 
 })
 //populating the locations/state in the location select element
@@ -16,9 +18,18 @@ function populateLocations(){
     }
 
 }
+//populating park type options
+function populateParkTypes(){
+    let parkTypeSelect=document.getElementById("parkType-select");
+    for(let type of parkTypesArray){
+        const option=new Option(type);
+        parkTypeSelect.appendChild(option);
+    }
+}
 //filter parks based on location/state/teritory selected
-function filterParksBasedOnLocation(){
+function filterParksBasedOnLocationAndType(){
     let locationSelect=document.getElementById("location-select").value;
+    let typeSelected=document.getElementById("parkType-select").value;
 
     let filteredParks=nationalParksArray;
     if(locationSelect!="Show All")
@@ -26,6 +37,12 @@ function filterParksBasedOnLocation(){
         filteredParks=filteredParks.filter(park=>park.State==locationSelect)
 
     }
+    if(typeSelected!="Show All"){
+        filteredParks=filteredParks.filter(park=>park.LocationName.includes(typeSelected))
+    }
+
+    // console.log(locationSelect)
+    // console.log(typeSelected);
 
     displayNationalParks(filteredParks);
 
