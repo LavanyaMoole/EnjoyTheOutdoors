@@ -58,11 +58,11 @@ function displayNoParksMessage() {
     const parksContainer = document.querySelector("#content");
     parksContainer.innerHTML = "";
     let messageContainer = document.createElement("p");
-    messageContainer.style.color="red";
+    messageContainer.style.color = "red";
     messageContainer.classList.add("fw-semibold")
-    
 
-    messageContainer.innerText="Sorry ☹! with your selection there is no parks available."
+
+    messageContainer.innerText = "Sorry ☹! with your selection there is no parks available."
     parksContainer.appendChild(messageContainer)
 }
 //display parks
@@ -90,6 +90,9 @@ function displayNationalPark(park, parentDiv) {
     addFax(park, parkDiv);
     addLatitude(park, parkDiv);
     addLongitude(park, parkDiv);
+    if(park.Visit){
+        addVisitLinkOfPark(park,parkDiv);
+    }
 
 }
 //functions for adding park details to the parentdiv/parkdiv
@@ -151,7 +154,11 @@ function addLongitude(park, parkDiv) {
     parkDiv.appendChild(parkLongitude);
 }
 
-
-
-
-
+function addVisitLinkOfPark(park, parkDiv){
+    const parkLink=document.createElement("a");
+    parkLink.href=park.Visit;
+    
+    parkLink.textContent = park.LocationName;
+    parkLink.target="_blank";
+    parkDiv.appendChild(parkLink);
+}

@@ -16,10 +16,10 @@ function populateMountainsNames() {
 //filter the mountain based on the selected mountain name
 function filterMountains() {
     let selectedMountain = document.getElementById("mountain-select").value;
-    console.log(selectedMountain)
+    // console.log(selectedMountain)
     let mountain = mountainsArray.find(mountain => mountain.name == selectedMountain);
 
-    console.log(mountain);
+    // console.log(mountain);
     displayMountainDetails(mountain)
 }
 //display mountain details
@@ -38,6 +38,13 @@ function displayMountainDetails(mountain) {
     addEffort(mountain, detailsContainer);
 
     addCoordinates(mountain, detailsContainer);
+    //  Fetch  the  sunset/sunrise  times  for  a  specific  mountain
+    getSunsetForMountain(mountain.coords[0], mountain.coords[1]).then(data => {
+        addSunriseTime(data,detailsContainer);
+        addSunsetTime(data,detailsContainer);
+    })
+
+    
 
 }
 function addMountainName(mountain, detailsContainer) {
@@ -78,3 +85,29 @@ function addCoordinates(mountain, detailsContainer) {
     coordinates.innerText = `Latitude: ${mountain.coords.lat}, Longitude: ${mountain.coords.lng}`;
     detailsContainer.appendChild(coordinates);
 }
+
+//  function  that  can  "fetch"  the  sunrise/sunset  times
+async function getSunsetForMountain(lat, lng) {
+    let response = await fetch(
+        `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`); let data = await response.json();
+    return data;
+}
+
+
+function addSunriseTime(data,detailsContainer){
+    const sunriseTime=document.createElement("p");
+    sunriseTime.innerText="Sunrise Time: "+data.results.sunrise;
+    // console.log(data.results.sunrise);
+    
+    detailsContainer.appendChild(sunriseTime);
+}
+
+function addSunsetTime(data,detailsContainer){
+    const sunsetTime=document.createElement("p");
+    sunsetTime.innerText="Sunset Time: "+data.results.sunset;
+    // console.log(data.results.sunset);
+    
+    detailsContainer.appendChild(sunsetTime);
+}
+
+
