@@ -1,51 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"
-  />
-
-
-</head>
-<body>
-    <header>
-        <h1>Explore the Outdoors</h1>
-    </header>
-  
-        <ul class="navigation-links">
-            <li><a href="./index.html">Home Page</a></li>
-            <li><a href="./nationalParksSearch.html" target="_blank">National Parks Search Page</a></li>
-            <li><a href="./mountainsInformation.html" target="_blank">Mountains Information Page</a></li>
-            
-        </ul>
-   
-
- 
-    <main>
-        <section class="hero">
-            <img src="outdoors-image.jpg" alt="Outdoor Scene">
-            <p>Welcome to our outdoors page! Explore the beauty of nature and discover exciting outdoor activities.</p>
-        </section>
-
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="fixed-top">
+        <span id="links" class="">
+            <img src="../images/logo.png" alt="logo">
+        </span>
+        <span><h1>Explore The Outdoors</h1></span>
+      <span class="header-content">
        
+        
+        <nav>
+          <ul>
+            <li><a href="../html/index.html">Home</a></li>
+            <li>
+              <a href="../html/nationalParksSearch.html">National Parks</a>
+            </li>
+            <li><a href="../html/mountainsInformation.html">Mountains</a></li>
+          </ul>
+        </nav>
+      </span>
+      
+    </header>
+
+    <br>
+    <br>
+    <main class="mt-5">
+      
+      <div class="image-container">
+        <img
+          src="../images/outdoors.jpg"
+          alt="homepage-image"
+          class="homepage-image"
+        />
+        <div class="image-text mt-4">
+          <h2>Welcome to outdoors page!</h2>
+          <p>
+            Explore the beauty of nature and discover exciting outdoor
+            activities.
+          </p>
+        </div>
+      </div>
+      <!-- <div class="row mt-4">
+        <div class="col-4">
+           <img src="../images/nationalParks.jpg" alt="" >
+          </div>
+          <div class="col">
+            2 of 2
+          </div>
+      </div> -->
+
+      <div class="mt-4">
+        <div class="row">
+          <div class="col-6">
+            <img src="../images/nationalParks.jpg" alt="National Parks" class="image" />
+          </div>
+          <div class="col content">
+            <h5>National Parks</h5>
+            <p>
+              Our national parks host millions of people a year, sustain
+              countless species, and safeguard some of the most breathtaking
+              landscapes on the planet. They preserve natural and cultural
+              resources “for the enjoyment, education, and inspiration of this
+              and future generations.” Here’s how to make the most of your next
+              national parks trip.
+            </p>
+            <button class="btn btn-primary align-content-md-center">
+              Explore National Parks
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="row">
+          <div class="col content">
+            <h5>Mountains</h5>
+            <p>
+              The United States of America has many diverse landscapes. In fact,
+              it’s home to 300+ major summits over at least 3,000 meters in
+              height. This US mountain ranges map highlights the major mountain
+              ranges in the United States and how they are distributed
+              throughout the country. Each state has its own unique geography.
+              The Appalachian Mountains are the most prominent range in the
+              east. Whereas the Rocky Mountains are in the central USA. Finally,
+              the Sierra Nevada and Cascade Mountains are in the west. The
+              majority of its highest peaks are located in the states of
+              Colorado, Alaska, and California. This US mountain ranges map is
+              perfect for identifying where your favorite mountaintop is located
+              and which states it’s in. It also briefly describes each range and
+              some interesting facts about them.
+            </p>
+            <button class="btn btn-primary">Explore Mountains</button>
+          </div>
+          <div class="col-6">
+            <img src="../images/mountains.webp" alt="National Parks" class="image"/>
+          </div>
+          <div class="mt-5">
+            <h4 class="text-center">About Us</h4>
+            <p class="text-center">
+                Welcome to Enjoy the Outdoors, your go-to resource for discovering the beauty of nature and the thrill of outdoor adventures. At Enjoy the Outdoors, we are passionate about fostering a deep appreciation for the wonders of our planet and inspiring others to explore and connect with the natural world.
+            </p>
+            <p class="text-center">
+                Our dedicated team of outdoor enthusiasts, nature lovers, and adventure seekers curates valuable information about national parks and mountains to help you plan memorable and enriching experiences. We believe that spending time in nature not only provides relaxation and joy but also promotes a sense of environmental stewardship.
+            </p>
+            <p class="text-center">
+                Whether you're a seasoned explorer or a newcomer to outdoor activities, our goal is to offer comprehensive guides, captivating stories, and practical tips that cater to all levels of interest and expertise. We invite you to embark on a journey of discovery, learning, and connection with Enjoy the Outdoors.
+            </p>
+            <p class="text-center">
+                Thank you for joining us on this adventure. Let's explore the outdoors together and make lasting memories surrounded by the breathtaking landscapes our planet has to offer.
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="fixed-bottom">
-        <p>&copy; 2023 Enjoy the Outdoors</p>
+      <p>&copy; 2023 Explore The Outdoors @ Lavanya</p>
     </footer>
-     <!-- bootstrap js -->
-     <script
-     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-     crossorigin="anonymous"
-   ></script>
-</body>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

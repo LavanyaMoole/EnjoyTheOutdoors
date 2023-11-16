@@ -90,8 +90,8 @@ function displayNationalPark(park, parentDiv) {
     addFax(park, parkDiv);
     addLatitude(park, parkDiv);
     addLongitude(park, parkDiv);
-    if(park.Visit){
-        addVisitLinkOfPark(park,parkDiv);
+    if (park.Visit) {
+        addVisitLinkOfPark(park, parkDiv);
     }
 
 }
@@ -100,11 +100,13 @@ function displayNationalPark(park, parentDiv) {
 function addParkName(park, parkDiv) {
     // create the park info div 
     const parkInfoDiv = document.createElement("div");
+    
     parkDiv.appendChild(parkInfoDiv);
 
     // add park header
     const parkHeader = document.createElement("h5")
-    parkHeader.innerText = "Park Name: " + park.LocationName;
+    parkHeader.classList.add("card-header")
+    parkHeader.innerText =   park.LocationName;
     parkInfoDiv.appendChild(parkHeader);
 
 }
@@ -154,11 +156,11 @@ function addLongitude(park, parkDiv) {
     parkDiv.appendChild(parkLongitude);
 }
 
-function addVisitLinkOfPark(park, parkDiv){
-    const parkLink=document.createElement("a");
-    parkLink.href=park.Visit;
-    
+function addVisitLinkOfPark(park, parkDiv) {
+    const parkLink = document.createElement("a");
+    parkLink.href = park.Visit;
+
     parkLink.textContent = park.LocationName;
-    parkLink.target="_blank";
+    parkLink.target = "_blank";
     parkDiv.appendChild(parkLink);
 }

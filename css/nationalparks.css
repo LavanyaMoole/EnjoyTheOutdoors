@@ -17,10 +17,11 @@ nav a {
     list-style-type: none;
     color: beige;
 }
+
 nav li {
     display: inline;
     margin-right: 20px;
-   
+
 }
 
 nav a::before {
@@ -30,53 +31,53 @@ nav a::before {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #c1b8bb; 
+    background-color: beige;
     transition: width 0.3s;
 }
 
 nav a:hover::before {
     width: 100%;
 }
-main
-{
+
+main {
     display: grid;
     grid-template-columns: 350px auto;
     margin-top: 15px;
     height: 87vh;
 }
 
-main > .filter-box
-{
+main>.filter-box {
     width: 350px;
     padding: 15px;
 }
 
 
 
-main > .content
-{
-    display: grid; 
+main>.content {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     height: 87vh;
-     overflow: scroll;
+    overflow: scroll;
 }
 
 @media screen and (max-width: 800px) {
-    main
-{
-    display: block;
-    grid-template-rows: 350px auto;
-    margin-top: 15px;
-    height: 87vh;
-}
+    main {
+        display: block;
+        grid-template-rows: 350px auto;
+        margin-top: 15px;
+        height: 87vh;
+    }
 
-    main > .content
-{
-    display: inline-block; 
-    grid-template-rows: 1fr 1fr 1fr;
-    /* width: 100%;
+    main>.content {
+        display: inline-block;
+        grid-template-rows: 1fr 1fr 1fr;
+        /* width: 100%;
     height: 87vh; */
-     overflow: scroll;
+        overflow: scroll;
+    }
 }
+.card:hover{
+    border: #6c6a6b solid 3px;
+    background-color: rgb(195, 203, 203);
 }
