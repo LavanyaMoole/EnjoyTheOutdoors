@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     populateLocations();
     populateParkTypes()
-    displayNationalParks(nationalParksArray);
+    // displayNationalParks(nationalParksArray);
     let locationSelect = document.getElementById("location-select");
     locationSelect.addEventListener("change", filterParksBasedOnLocationAndType)
 
