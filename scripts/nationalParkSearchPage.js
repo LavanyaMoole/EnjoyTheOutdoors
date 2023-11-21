@@ -46,10 +46,6 @@ function filterParksBasedOnLocationAndType() {
     } else {
         displayNoParksMessage();
     }
-    // console.log(locationSelect)
-    // console.log(typeSelected);
-
-    // displayNationalParks(filteredParks);
 
 }
 //display message
@@ -57,13 +53,13 @@ function displayNoParksMessage() {
     // Assuming you have a DOM element to display the message
     const parksContainer = document.querySelector("#content");
     parksContainer.innerHTML = "";
-    let messageContainer = document.createElement("p");
+    let messageContainer = document.createElement("h3");
     messageContainer.style.color = "red";
     messageContainer.classList.add("fw-semibold")
 
 
-    messageContainer.innerText = "Sorry ☹! with your selection there is no parks available."
-    parksContainer.appendChild(messageContainer)
+    messageContainer.innerText = "Sorry ☹! We couldn't find any parks that match your selection. Please try a different search or explore other options."
+    parksContainer.appendChild(messageContainer);
 }
 //display parks
 function displayNationalParks(nationalParks) {
@@ -100,13 +96,13 @@ function displayNationalPark(park, parentDiv) {
 function addParkName(park, parkDiv) {
     // create the park info div 
     const parkInfoDiv = document.createElement("div");
-    
+
     parkDiv.appendChild(parkInfoDiv);
 
     // add park header
     const parkHeader = document.createElement("h5")
     parkHeader.classList.add("card-header")
-    parkHeader.innerText =   park.LocationName;
+    parkHeader.innerText = park.LocationName;
     parkInfoDiv.appendChild(parkHeader);
 
 }
@@ -157,10 +153,12 @@ function addLongitude(park, parkDiv) {
 }
 
 function addVisitLinkOfPark(park, parkDiv) {
+    const visit = document.createElement("p");
+    visit.innerText = "Visit: "
     const parkLink = document.createElement("a");
     parkLink.href = park.Visit;
-
     parkLink.textContent = park.LocationName;
     parkLink.target = "_blank";
-    parkDiv.appendChild(parkLink);
+    visit.appendChild(parkLink)
+    parkDiv.appendChild(visit)
 }

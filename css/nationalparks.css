@@ -38,7 +38,7 @@ main {
     display: grid;
     grid-template-columns: 350px auto;
     margin-top: 20px;
-    height: 87vh;
+    height: 95vh;
 }
 
 main>.filter-box {
